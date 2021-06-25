@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'brick-swift'
+  s.name             = 'BrickSwift'
   s.version          = '0.0.1'
   s.summary          = 'Common tool classes and reactive extensions for swift projects'
 
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
   s.swift_version = '5.1'
 
   s.frameworks = 'UIKit'
-  s.dependency 'Alamofire', '~> 5.4.3'
-  s.dependency 'HandyJSON', '~> 5.0.2'
-  s.dependency 'RxSwift', '~> 6.1.0'
-  s.dependency 'RxCocoa', '~> 6.1.0'
+  s.dependency 'Alamofire'
+  s.dependency 'HandyJSON'
+  s.dependency 'RxSwift'
+  s.dependency 'RxCocoa'
   
 end
