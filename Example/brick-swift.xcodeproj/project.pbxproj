@@ -14,12 +14,12 @@
 /* Begin PBXFileReference section */
 		2864F602AE806FF4B90664C2 /* Pods-brick-swift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brick-swift_Tests.release.xcconfig"; path = "Target Support Files/Pods-brick-swift_Tests/Pods-brick-swift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		505ECBBAA6409DEE8E83AE56 /* Pods_brick_swift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_brick_swift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8F73BBD11C82F656C226AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		5B8F73BBD11C82F656C226AC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* brick-swift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "brick-swift_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6A55B906E1DCBAB332A5B027 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		93ABE9C5EE7434E86635AD11 /* brick-swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = "brick-swift.podspec"; path = "../brick-swift.podspec"; sourceTree = "<group>"; };
+		6A55B906E1DCBAB332A5B027 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		93ABE9C5EE7434E86635AD11 /* brick-swift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "brick-swift.podspec"; path = "../brick-swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ABE78D2E30D4A3137A7D2334 /* Pods-brick-swift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-brick-swift_Tests.debug.xcconfig"; path = "Target Support Files/Pods-brick-swift_Tests/Pods-brick-swift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,6 @@
 				ABE78D2E30D4A3137A7D2334 /* Pods-brick-swift_Tests.debug.xcconfig */,
 				2864F602AE806FF4B90664C2 /* Pods-brick-swift_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,10 +130,6 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0900;
@@ -147,6 +142,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

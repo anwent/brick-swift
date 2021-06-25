@@ -1,0 +1,6 @@
+framework module Pods_brick_swift_Tests {
+  umbrella header "Pods-brick-swift_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module brick_swift {
+  umbrella header "brick-swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
