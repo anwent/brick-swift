@@ -1,6 +1,0 @@
-use_frameworks!
-target 'brick-swift_Tests' do
-  pod 'brick-swift', :path => '../'
-  
-  
-end
