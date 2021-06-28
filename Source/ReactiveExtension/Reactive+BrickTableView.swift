@@ -26,9 +26,3 @@ public extension Reactive where Base: BrickTableView {
     }
 
 }
-
-class A {
-    func test() {
-
-    }
-}
