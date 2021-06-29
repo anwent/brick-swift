@@ -7,7 +7,7 @@
 import RxSwift
 import RxCocoa
 
-private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
+private struct BrickActivityToken<E> : ObservableConvertibleType, Disposable {
     private let _source: Observable<E>
     private let _dispose: Cancelable
 
@@ -25,7 +25,7 @@ private struct ActivityToken<E> : ObservableConvertibleType, Disposable {
     }
 }
 
-public class ActivityIndicator : SharedSequenceConvertibleType {
+public class BrickActivityIndicator : SharedSequenceConvertibleType {
     public typealias Element = Bool
     public typealias SharingStrategy = DriverSharingStrategy
 
@@ -40,9 +40,9 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
     }
 
     fileprivate func trackActivityOfObservable<Source: ObservableConvertibleType>(_ source: Source) -> Observable<Source.Element> {
-        return Observable.using({ () -> ActivityToken<Source.Element> in
+        return Observable.using({ () -> BrickActivityToken<Source.Element> in
             self.increment()
-            return ActivityToken(source: source.asObservable(), disposeAction: self.decrement)
+            return BrickActivityToken(source: source.asObservable(), disposeAction: self.decrement)
         }) { t in
             return t.asObservable()
         }
@@ -66,7 +66,7 @@ public class ActivityIndicator : SharedSequenceConvertibleType {
 }
 
 extension ObservableConvertibleType {
-    public func trackActivity(_ activityIndicator: ActivityIndicator) -> Observable<Element> {
+    public func trackActivity(_ activityIndicator: BrickActivityIndicator) -> Observable<Element> {
         activityIndicator.trackActivityOfObservable(self)
     }
 }

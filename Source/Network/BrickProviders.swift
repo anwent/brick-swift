@@ -7,8 +7,8 @@ public protocol BrickNetworkInterface {}
 
 public struct Providers: BrickNetworkInterface {
 
-    private(set) var successfulCode: Int
-    private(set) var logEnable: Bool
+    public private(set) var successfulCode: Int
+    public private(set) var logEnable: Bool
     
     public static var instance: Providers = Providers()
 

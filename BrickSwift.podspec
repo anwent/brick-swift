@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BrickSwift'
-  s.version          = '0.0.1'
+  s.version          = '1.0.0'
   s.summary          = 'Common tool classes and reactive extensions for swift projects'
 
   s.description      = <<-DESC
@@ -32,5 +32,6 @@ Pod::Spec.new do |s|
   s.dependency 'HandyJSON'
   s.dependency 'RxSwift'
   s.dependency 'RxCocoa'
+  s.dependency 'SnapKit'
   
 end

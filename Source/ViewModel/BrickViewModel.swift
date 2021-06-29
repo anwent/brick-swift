@@ -10,22 +10,16 @@ open class BrickViewModel: NSObject {
 
     public let bag = DisposeBag()
 
-    // mark: toast
     private let _successToast = BehaviorRelay<String?>(value: nil)
     private let _errorToast = BehaviorRelay<String?>(value: nil)
     private let _stateToast = BehaviorRelay<String?>(value: nil)
     private let _loadingToast = BehaviorRelay<String?>(value: nil)
 
-    // mark: network
-    internal let activityIndicator = ActivityIndicator()
+    public let activityIndicator = BrickActivityIndicator()
 
-    // mark: navigator
     private let _showViewController = BehaviorRelay<BrickViewController?>(value: nil)
     private let _presentViewController = BehaviorRelay<BrickViewController?>(value: nil)
-
-    // mark: alertController
     private let _presentAlertController = BehaviorRelay<UIAlertController?>(value: nil)
-
 }
 
 extension BrickViewModel {
@@ -69,5 +63,25 @@ extension BrickViewModel {
                     Observable.from(optional: $0)
                 }
                 .asDriverOnErrorJustComplete()
+    }
+}
+
+extension BrickViewModel: UITableViewDelegate, UITableViewDataSource {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        fatalError("tableView(_:numberOfRowsInSection:) has not been implemented")
+    }
+
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        fatalError("tableView(_:cellForRowAt:) has not been implemented")
+    }
+}
+
+extension BrickViewModel: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        fatalError("collectionView(_:numberOfItemsInSection:) has not been implemented")
+    }
+
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        fatalError("collectionView(_:cellForItemAt:) has not been implemented")
     }
 }

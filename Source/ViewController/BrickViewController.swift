@@ -19,21 +19,23 @@ open class BrickViewController: UIViewController {
 
     open var toastDelegate: BrickToastDelegate?
 
-    private(set) var viewModel: BrickViewModel
+    open private(set) var viewModel: BrickViewModel
 
     init(viewModel vm: BrickViewModel) {
         viewModel = vm
         super.init(nibName: nil, bundle: nil)
     }
 
-    init(viewModel vm: BrickViewModel, nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        viewModel = vm
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    open override func loadView() {
+        super.loadView()
+        makeUI()
+    }
+    
+    open func makeUI() {}
 
     open override func viewDidLoad() {
         super.viewDidLoad()
