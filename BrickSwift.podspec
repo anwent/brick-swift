@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BrickSwift'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Common tool classes and reactive extensions for swift projects'
 
   s.description      = <<-DESC
