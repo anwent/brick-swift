@@ -21,7 +21,7 @@ open class BrickViewController: UIViewController {
 
     open private(set) var viewModel: BrickViewModel
 
-    init(viewModel vm: BrickViewModel) {
+    public init(viewModel vm: BrickViewModel) {
         viewModel = vm
         super.init(nibName: nil, bundle: nil)
     }
